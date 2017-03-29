@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>尊敬的土豪您好！</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body,html{
+            width: 100%;
+            height: 100%;
+        }
+        :root{
+            background-color: black;
+        }
+        .wrap{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .wrap .text{
+            width: 50px;
+            height: 150px;
+            background-color: pink;
+            color: purple;
+            font-weight: bold;
+            text-shadow: 0 0 0 15px #eee;
+            text-align: center;
+            font-size: 28px;
+            border-radius: 8px;
+            box-shadow:-10px 0 10px red, /*左边阴影*/
+            10px 0 10px yellow, /*右边阴影*/
+            0 -10px 10px blue, /*顶部阴影*/
+            0 10px 10px green; /*底边阴影*/
+            position: relative;
+            left: 45%;
+            top: 30%;
+        }
+        .wrap .code{
+            width: 300px;
+            height: 350px;
+            position: absolute;
+            left: 10%;
+            top: 25%;
+            background-color: white;
+            display: none;
+        }
+        .wrap .code span{
+            display: inline-block;
+            width: 300px;
+            text-align: center;
+            line-height: 45px;
+            color: purple;
+            font-size:24px;
+            font-weight: bold;
+        }
+        .wrap .code img{
+            width: 300px;
+            height: 300px;
+            background-size: 100% 100%;
+            position: absolute;
+            left: 0px;
+            bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="text">捐助一下</div>
+        <div class="code"><span>扫扫我支持一下</span><img src="weixin.png"></div>
+    </div>
+</body>
+<script type="text/javascript">
+var text = document.querySelector(".text");
+var code = document.querySelector(".code");
+
+text.onclick = function(){
+    this.style.display = "none";
+    code.style.display = "block";
+}
+</script>
+</html>
